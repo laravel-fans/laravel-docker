@@ -1,6 +1,8 @@
 # Laravel Docker
 
 [![codecov](https://codecov.io/gh/laravel-fans/laravel-docker/branch/main/graph/badge.svg)](https://codecov.io/gh/laravel-fans/laravel-docker)
+[![Laravel 6](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%206/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions)
+[![Laravel 7](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%207/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions)
 
 Full Laravel production environment for Docker.
 
