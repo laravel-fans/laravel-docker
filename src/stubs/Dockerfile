@@ -11,8 +11,8 @@ RUN apt-get update \
     jq \
     libfreetype6-dev libicu-dev libjpeg62-turbo-dev libpng-dev libsasl2-dev libssl-dev libwebp-dev libxpm-dev libzip-dev \
     unzip \
-    zlib1g-dev
-RUN apt-get clean \
+    zlib1g-dev \
+    && apt-get clean \
     && apt-get autoclean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
