@@ -31,9 +31,8 @@ class DockerPublishCommand extends Command
     {
         $basePath = $this->laravel->basePath();
 
-        File::copyDirectory(__DIR__ . '/stubs', $basePath, [FilesystemIterator::CURRENT_MODE_MASK]);
+        File::copyDirectory(__DIR__ . '/stubs', $basePath, FilesystemIterator::CURRENT_MODE_MASK);
 
         $this->info('published successfully.');
     }
 }
-
