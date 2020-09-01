@@ -1,0 +1,28 @@
+{
+    "name": "laravel-fans/docker",
+    "description": "Full Laravel production environment for Docker",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sinkcup",
+            "email": "sinkcup@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LaravelFans\\Docker\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelFans\\Docker\\DockerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "laravel/framework": ">=v5.5.50"
+    }
+}
