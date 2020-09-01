@@ -15,7 +15,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: PHPunit
-        uses: ./
         run: |
           apt update
           apt install -y libzip-dev unzip
