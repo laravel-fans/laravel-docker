@@ -1,5 +1,7 @@
 # Laravel Docker
 
+[![codecov](https://codecov.io/gh/laravel-fans/laravel-docker/branch/main/graph/badge.svg)](https://codecov.io/gh/laravel-fans/laravel-docker)
+
 Full Laravel production environment for Docker.
 
 ## install
