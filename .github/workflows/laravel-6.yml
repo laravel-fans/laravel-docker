@@ -1,0 +1,30 @@
+name: Laravel 6
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-18.04
+    container:
+      image: php:7.4-cli
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: PHPUnit
+        run: |
+          apt update
+          apt install -y libzip-dev unzip
+          pecl install xdebug
+          docker-php-ext-enable xdebug
+          curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+          composer require orchestra/testbench:^v4 --dev
+          ./vendor/bin/phpunit --coverage-clover coverage.xml --coverage-filter src/ tests/
+      - name: codecov
+        uses: codecov/codecov-action@v1
+        with:
+          name: laravel-6
