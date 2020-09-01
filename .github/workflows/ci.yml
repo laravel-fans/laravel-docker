@@ -18,6 +18,8 @@ jobs:
         run: |
           apt update
           apt install -y libzip-dev unzip
+          pecl install xdebug
+          docker-php-ext-enable xdebug
           curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
           composer install
           ./vendor/bin/phpunit --coverage-clover coverage.xml --coverage-filter src/ tests/
