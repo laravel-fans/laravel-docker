@@ -12,5 +12,6 @@ class DockerPublishCommandTest extends TestCase
         $this->assertFileExists($laravelPath . '/docker/usr/local/bin/docker-laravel-entrypoint');
         $this->assertFileExists($laravelPath . '/docker/var/spool/cron/crontabs');
         $this->assertFileExists($laravelPath . '/Dockerfile');
+        $this->assertFileExists($laravelPath . '/.dockerignore');
     }
 }
