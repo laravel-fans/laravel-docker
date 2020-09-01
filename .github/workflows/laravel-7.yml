@@ -1,3 +1,4 @@
+name: Laravel 7
 on:
   push:
     branches:
@@ -14,14 +15,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: PHPunit
+      - name: PHPUnit
         run: |
           apt update
           apt install -y libzip-dev unzip
           pecl install xdebug
           docker-php-ext-enable xdebug
           curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-          composer install
+          composer require orchestra/testbench:^v5 --dev
           ./vendor/bin/phpunit --coverage-clover coverage.xml --coverage-filter src/ tests/
       - name: codecov
         uses: codecov/codecov-action@v1
+        with:
+          name: laravel-6
