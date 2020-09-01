@@ -22,8 +22,7 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
     && docker-php-ext-install gd intl pdo_mysql zip \
     && docker-php-ext-enable opcache redis
 
-COPY composer.json /var/www/laravel/
-COPY composer.lock /var/www/laravel/
+COPY composer.json composer.lock ./
 RUN composer install --no-autoloader --no-scripts --no-dev
 
 COPY docker/ /
