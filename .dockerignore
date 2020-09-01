@@ -1,6 +1,8 @@
-.git
-.idea
 .env
+.gitignore
+
+.git/
+.idea/
 bootstrap/cache/*
 laradock/
 node_modules/
