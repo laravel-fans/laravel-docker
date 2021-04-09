@@ -12,7 +12,7 @@ Full Laravel production environment for Docker.
 Run in your Laravel project:
 
 ```shell
-composer install laravel-fans/docker
+composer require --dev laravel-fans/docker
 php artisan docker:publish
 ```
 
