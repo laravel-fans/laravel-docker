@@ -9,9 +9,9 @@ on:
 jobs:
   test:
     name: Test
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     container:
-      image: php:7.4-cli
+      image: php:8.0-cli
     steps:
       - name: Checkout
         uses: actions/checkout@v2
