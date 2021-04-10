@@ -57,8 +57,6 @@ jobs:
     name: Push Demo Code
     needs: test
     runs-on: ubuntu-latest
-    container:
-      image: php:8.0-cli
     steps:
       - name: GitHub Environment Variables Action
         uses: FranzDiebold/github-env-vars-action@v2.1.0
@@ -69,7 +67,7 @@ jobs:
           cache-name: cache-laravel-project
           branch-name: ${{ env.CI_HEAD_REF_SLUG }}
         with:
-          path: ./laravel-demo
+          path: /__w/laravel-docker/laravel-docker/laravel-demo
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.branch-name }}-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
@@ -80,5 +78,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./laravel-demo
+          publish_dir: /__w/laravel-docker/laravel-docker/laravel-demo
           publish_branch: laravel-8
