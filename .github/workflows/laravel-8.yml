@@ -15,6 +15,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: GitHub Environment Variables Action
+        uses: FranzDiebold/github-env-vars-action@v2.1.0
+        run: |
+          echo "CI_HEAD_REF_SLUG=$CI_HEAD_REF_SLUG"
+
+      - name: Cache Laravel project
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-laravel-project
+        with:
+          path: ./laravel-demo
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ CI_HEAD_REF_SLUG }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
       - name: PHPUnit
         run: |
           apt update
@@ -24,19 +42,34 @@ jobs:
           curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
           composer require orchestra/testbench:^v6 --dev
           XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-clover coverage.xml --coverage-filter src/ tests/
+
       - name: codecov
         uses: codecov/codecov-action@v1
         with:
           name: laravel-8
-      - name: Create Laravel project
+
+      - name: install in real Laravel project
         run: |
           composer create-project --prefer-dist laravel/laravel laravel-demo "8.*"
-          cd laravel-demo && composer require --dev laravel-fans/docker:dev-main && php artisan docker:publish
+          cd laravel-demo && composer require --dev laravel-fans/docker:dev--${{ CI_HEAD_REF_SLUG }} && php artisan docker:publish
+
   push-demo:
     name: Push Demo Code
     needs: test
     runs-on: ubuntu-latest
     steps:
+      - name: Cache Laravel project
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-laravel-project
+        with:
+          path: ./laravel-demo
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ CI_HEAD_REF_SLUG }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
