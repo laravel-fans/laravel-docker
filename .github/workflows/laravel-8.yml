@@ -57,6 +57,8 @@ jobs:
     name: Push Demo Code
     needs: test
     runs-on: ubuntu-latest
+    container:
+      image: php:8.0-cli
     steps:
       - name: GitHub Environment Variables Action
         uses: FranzDiebold/github-env-vars-action@v2.1.0
