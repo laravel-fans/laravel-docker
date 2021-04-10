@@ -18,8 +18,6 @@ jobs:
 
       - name: GitHub Environment Variables Action
         uses: FranzDiebold/github-env-vars-action@v2.1.0
-        run: |
-          echo "CI_HEAD_REF_SLUG=$CI_HEAD_REF_SLUG"
 
       - name: Cache Laravel project
         uses: actions/cache@v2
