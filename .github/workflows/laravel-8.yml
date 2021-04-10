@@ -19,6 +19,12 @@ jobs:
       - name: GitHub Environment Variables Action
         uses: FranzDiebold/github-env-vars-action@v2.1.0
 
+      - name: Print environment variables exposed by GitHub
+        run: |
+          echo "GITHUB_ACTOR=$GITHUB_ACTOR"
+          echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
+          echo "GITHUB_SHA=$GITHUB_SHA"
+
       - name: Cache Laravel project
         uses: actions/cache@v2
         env:
@@ -27,10 +33,6 @@ jobs:
         with:
           path: ./laravel-demo
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.branch-name }}-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
 
       - name: PHPUnit
         run: |
@@ -61,6 +63,12 @@ jobs:
       - name: GitHub Environment Variables Action
         uses: FranzDiebold/github-env-vars-action@v2.1.0
 
+      - name: Print environment variables exposed by GitHub
+        run: |
+          echo "GITHUB_ACTOR=$GITHUB_ACTOR"
+          echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
+          echo "GITHUB_SHA=$GITHUB_SHA"
+
       - name: Cache Laravel project
         uses: actions/cache@v2
         env:
@@ -69,10 +77,6 @@ jobs:
         with:
           path: /__w/laravel-docker/laravel-docker/laravel-demo
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.branch-name }}-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
