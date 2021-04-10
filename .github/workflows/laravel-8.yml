@@ -23,7 +23,7 @@ jobs:
         uses: actions/cache@v2
         env:
           cache-name: cache-laravel-project
-          branch-name: ${CI_HEAD_REF_SLUG}
+          branch-name: $CI_HEAD_REF_SLUG
         with:
           path: ./laravel-demo
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.branch-name }}-${{ github.sha }}
@@ -65,7 +65,7 @@ jobs:
         uses: actions/cache@v2
         env:
           cache-name: cache-laravel-project
-          branch-name: ${CI_HEAD_REF_SLUG}
+          branch-name: $CI_HEAD_REF_SLUG
         with:
           path: ./laravel-demo
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.branch-name }}-${{ github.sha }}
