@@ -75,12 +75,12 @@ jobs:
           cache-name: cache-laravel-project
           branch-name: ${{ env.CI_HEAD_REF_SLUG }}
         with:
-          path: /__w/laravel-docker/laravel-docker/laravel-demo
+          path: ./laravel-demo
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.branch-name }}-${{ github.sha }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: /__w/laravel-docker/laravel-docker/laravel-demo
+          publish_dir: ./laravel-demo
           publish_branch: laravel-8
