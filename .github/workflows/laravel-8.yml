@@ -19,13 +19,19 @@ jobs:
       - name: GitHub Environment Variables Action
         uses: FranzDiebold/github-env-vars-action@v2.1.0
 
+      - name: Print environment variables exposed by this action
+        run: |
+          echo "CI_HEAD_REF_SLUG=$CI_HEAD_REF_SLUG"
+          echo "env.CI_HEAD_REF_SLUG=${{ env.CI_HEAD_REF_SLUG }}"
+
       - name: Cache Laravel project
         uses: actions/cache@v2
         env:
           cache-name: cache-laravel-project
+          branch-name: ${{ env.CI_HEAD_REF_SLUG }}
         with:
           path: ./laravel-demo
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.CI_HEAD_REF_SLUG }}-${{ github.sha }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.branch-name }}-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
