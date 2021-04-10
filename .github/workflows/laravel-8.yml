@@ -62,3 +62,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: laravel-demo
           publish_branch: laravel-8
+          allow_empty_commit: true
