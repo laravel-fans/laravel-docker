@@ -28,39 +28,18 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           name: laravel-8
+      - name: Create Laravel project
+        run: |
+          composer create-project --prefer-dist laravel/laravel laravel-demo "8.*"
+          cd laravel-demo && composer require --dev laravel-fans/docker:dev-main && php artisan docker:publish
   push-demo:
     name: Push Demo Code
     needs: test
     runs-on: ubuntu-latest
-    container:
-      image: php:8.0-cli
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-      - name: Create Laravel project
-        run: |
-          pwd
-          ls -la
-          apt update
-          apt install -y libzip-dev unzip git
-          curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-          git checkout --orphan laravel-8
-          composer create-project --prefer-dist laravel/laravel laravel-demo "8.*"
-          mv laravel-demo/* laravel-demo/.* .
-          composer require --dev laravel-fans/docker:dev-main
-          php artisan docker:publish
-      - name: Commit files
-        run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "feat: laravel 8"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: laravel-8
-          force: true
+          publish_dir: ./laravel-demo
+          publish_branch: laravel-8
