@@ -58,6 +58,9 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
+      - name: GitHub Environment Variables Action
+        uses: FranzDiebold/github-env-vars-action@v2.1.0
+
       - name: Cache Laravel project
         uses: actions/cache@v2
         env:
