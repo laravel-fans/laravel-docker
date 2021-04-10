@@ -31,7 +31,6 @@ jobs:
   push-demo:
     name: Push Demo Code
     needs: test
-    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     container:
       image: php:8.0-cli
