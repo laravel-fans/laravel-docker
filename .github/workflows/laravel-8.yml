@@ -49,6 +49,7 @@ jobs:
 
       - name: install in real Laravel project
         run: |
+          rm -rf ./laravel-demo
           composer create-project --prefer-dist laravel/laravel laravel-demo "8.*"
           cd laravel-demo && composer require --dev laravel-fans/docker:dev-${CI_HEAD_REF_SLUG} && php artisan docker:publish
 
