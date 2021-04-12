@@ -87,7 +87,7 @@ jobs:
         working-directory: ./laravel-demo
         run: |
           echo "LARAVEL_VERSION=$(cat .version)" >> $GITHUB_ENV
-          echo "DOCKER_MANIFEST=$(DOCKER_CLI_EXPERIMENTAL=enabled docker manifest inspect laravelfans/laravel:$(cat .version) || echo '')" >> $GITHUB_ENV
+          echo "DOCKER_MANIFEST=$((DOCKER_CLI_EXPERIMENTAL=enabled docker manifest inspect laravelfans/laravel:$(cat .version) > /dev/null && echo 'json') || echo '')" >> $GITHUB_ENV
 
       - name: Build and push
         id: docker_build
