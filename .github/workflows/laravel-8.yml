@@ -6,6 +6,9 @@ on:
   pull_request:
     branches:
       - main
+  schedule:
+    - cron: '7 3 * * *'
+
 jobs:
   test:
     name: Test
@@ -82,15 +85,19 @@ jobs:
 
       - name: Get Laravel version
         working-directory: ./laravel-demo
-        run: echo "LARAVEL_VERSION=$(cat .version)" >> $GITHUB_ENV
+        run: |
+          echo "LARAVEL_VERSION=$(cat .version)" >> $GITHUB_ENV
+          echo "DOCKER_MANIFEST=$(DOCKER_CLI_EXPERIMENTAL=enabled docker manifest inspect laravelfans/laravel:${{ env.LARAVEL_VERSION }} || echo '')" >> $GITHUB_ENV
 
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
+        if: ${{ env.DOCKER_MANIFEST == '' }}
         with:
           push: true
           context: laravel-demo
           tags: laravelfans/laravel:8,laravelfans/laravel:${{ env.LARAVEL_VERSION }}
 
       - name: Image digest
+        if: steps.docker_build.conclusion == 'success'
         run: echo ${{ steps.docker_build.outputs.digest }}
