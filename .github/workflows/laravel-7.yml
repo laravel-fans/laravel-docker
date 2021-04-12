@@ -55,6 +55,7 @@ jobs:
 
   publish:
     name: Publish Code and Docker
+    if: ${{ github.ref == 'refs/heads/main' }}
     needs: test
     runs-on: ubuntu-latest
     steps:
