@@ -40,21 +40,29 @@ jobs:
           composer create-project --prefer-dist laravel/laravel laravel-demo "8.*"
           cd laravel-demo && composer require --dev laravel-fans/docker:dev-${CI_HEAD_REF_SLUG} && php artisan docker:publish
 
-      - name: upload artifact
+      - name: Create Tar
+        run: tar -cvf laravel-demo.tar laravel-demo
+
+      - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: laravel-demo
-          path: laravel-demo
+          path: laravel-demo.tar
 
   push-demo:
     name: Push Demo Code
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: Download a single artifact
+      - name: Download Artifact
         uses: actions/download-artifact@v2
         with:
           name: laravel-demo
+
+      - name: Extract Tar
+        run: |
+          tar -xvf laravel-demo.tar
+          ls -la .
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
