@@ -90,7 +90,7 @@ jobs:
         with:
           push: true
           context: laravel-demo
-          tags: laravel:8,laravel:${LARAVEL_VERSION}
+          tags: laravel:8,laravel:${{ env.LARAVEL_VERSION }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
