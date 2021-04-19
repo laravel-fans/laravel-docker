@@ -33,7 +33,6 @@ RUN a2enmod rewrite headers \
 COPY . /var/www/laravel
 RUN composer install --optimize-autoloader --no-dev
 
-RUN touch database/database.sqlite
 RUN chown www-data:www-data bootstrap/cache \
     && chown -R www-data:www-data storage/ \
     && chmod +x /usr/local/bin/docker-laravel-entrypoint
