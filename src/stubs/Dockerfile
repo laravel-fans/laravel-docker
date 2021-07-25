@@ -9,7 +9,8 @@ RUN apt-get update \
     cron \
     icu-devtools \
     jq \
-    libfreetype6-dev libicu-dev libjpeg62-turbo-dev libpng-dev libsasl2-dev libssl-dev libwebp-dev libxpm-dev libzip-dev \
+    libfreetype6-dev libicu-dev libjpeg62-turbo-dev libpng-dev libpq-dev \
+    libsasl2-dev libssl-dev libwebp-dev libxpm-dev libzip-dev \
     unzip \
     zlib1g-dev \
     && apt-get clean \
@@ -19,7 +20,7 @@ RUN apt-get update \
 RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
     && yes '' | pecl install redis \
     && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp --with-xpm \
-    && docker-php-ext-install gd intl pdo_mysql zip \
+    && docker-php-ext-install gd intl pdo_mysql pdo_pgsql zip \
     && docker-php-ext-enable opcache redis
 
 COPY composer.json composer.lock ./
