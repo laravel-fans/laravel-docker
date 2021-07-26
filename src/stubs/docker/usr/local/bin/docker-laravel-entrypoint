@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
 set -e
+cd /var/www/laravel
 
 role=${CONTAINER_ROLE:-app}
 env=${APP_ENV:-production}
-
-cd /var/www/laravel
+if [[ -z "$DB_CONNECTION" ]]; then
+    DB_CONNECTION=sqlite
+    echo -e "\e[33mENV undefined: DB_CONNECTION, use default $DB_CONNECTION\e[0m"
+    echo "DB_CONNECTION=$DB_CONNECTION" > .env
+fi
 
 chown www-data:www-data bootstrap/cache
 chown -R www-data:www-data storage/
