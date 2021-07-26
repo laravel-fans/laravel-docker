@@ -22,7 +22,14 @@ Then you will find `Dockerfile` in your project, so you can build:
 
 ```
 docker build -t laravel-demo .
-docker run -t laravel-demo
+docker run -it laravel-demo
+docker run -p 8000:80 -e "APP_ENV=local" -e "DB_CONNECTION=sqlite" \
+  -e "APP_KEY=base64:L+3avOYCfuq8nnDpHs74+5Et3sx27TssucHQIyqfpDY=" \
+  -it laravel-demo
 ```
 
 Feel free to change the `Dockerfile`.
+
+## screenshots
+
+![docker run laravel](https://user-images.githubusercontent.com/4971414/126929099-20fee54e-89e8-4d52-8c04-41eeab7ede2d.png)
