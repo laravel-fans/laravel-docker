@@ -14,13 +14,20 @@ if [[ -z "$DB_CONNECTION" ]]; then
     echo -e "\e[33mENV undefined: DB_CONNECTION, use default $DB_CONNECTION\e[0m"
 fi
 
-if [[ "$APP_ENV" = "local" ]]; then
-    cp /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
-    if [[ -z "$APP_KEY" ]]; then
+if [[ -z "$APP_KEY" ]]; then
+    msg="ENV undefined: APP_KEY"
+    if [[ "$APP_ENV" = "local" ]]; then
         APP_KEY=$(php artisan key:generate --show)
         export APP_KEY
-        echo -e "\e[33mENV undefined: APP_KEY, generate $APP_KEY\e[0m"
+        echo -e "\e[33m${msg},\e[0m generated $APP_KEY"
+    else
+        echo -e "\e[31m${msg}\e[0m"
+        exit 1
     fi
+fi
+
+if [[ "$APP_ENV" = "local" ]]; then
+    cp /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
 else
     echo "Caching configuration..."
     php artisan config:cache
