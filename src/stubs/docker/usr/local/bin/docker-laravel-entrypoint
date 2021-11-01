@@ -5,23 +5,21 @@ cd /var/www/laravel
 
 role=${CONTAINER_ROLE:-app}
 if [[ -z "$APP_ENV" ]]; then
-    APP_ENV=local
+    export APP_ENV=local
     echo -e "\e[33mENV undefined: APP_ENV, use default $APP_ENV\e[0m"
-    echo "APP_ENV=$APP_ENV" >> .env
 fi
 
 if [[ -z "$DB_CONNECTION" ]]; then
-    DB_CONNECTION=sqlite
+    export DB_CONNECTION=sqlite
     echo -e "\e[33mENV undefined: DB_CONNECTION, use default $DB_CONNECTION\e[0m"
-    echo "DB_CONNECTION=$DB_CONNECTION" >> .env
 fi
 
 if [[ "$APP_ENV" = "local" ]]; then
     cp /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
     if [[ -z "$APP_KEY" ]]; then
         APP_KEY=$(php artisan key:generate --show)
+        export APP_KEY
         echo -e "\e[33mENV undefined: APP_KEY, generate $APP_KEY\e[0m"
-        echo "APP_KEY=$APP_KEY" >> .env
     fi
 else
     echo "Caching configuration..."
