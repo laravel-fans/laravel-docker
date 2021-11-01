@@ -6,12 +6,12 @@ cd /var/www/laravel
 role=${CONTAINER_ROLE:-app}
 if [[ -z "$APP_ENV" ]]; then
     export APP_ENV=local
-    echo -e "\e[33mENV undefined: APP_ENV, use default $APP_ENV\e[0m"
+    echo -e "\e[33mENV undefined: APP_ENV,\e[0m use default $APP_ENV"
 fi
 
 if [[ -z "$DB_CONNECTION" ]]; then
     export DB_CONNECTION=sqlite
-    echo -e "\e[33mENV undefined: DB_CONNECTION, use default $DB_CONNECTION\e[0m"
+    echo -e "\e[33mENV undefined: DB_CONNECTION,\e[0m use default $DB_CONNECTION"
 fi
 
 if [[ -z "$APP_KEY" ]]; then
@@ -51,7 +51,7 @@ elif [[ "$role" = "scheduler" ]]; then
 
     echo -e "\e[33mSUGGESTION: use K8s Job instead of docker cron\e[0m"
     echo -e "\e[33m  https://kubernetes.io/docs/concepts/workloads/controllers/job/\e[0m"
-    echo "start cron"
+    echo "Running the cron..."
     crontab /var/spool/cron/crontabs/root
     cron -f
 
