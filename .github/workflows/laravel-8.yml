@@ -32,6 +32,11 @@ jobs:
           composer require orchestra/testbench:^v6 --dev
           XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-clover coverage.xml --coverage-filter src/ tests/
 
+      - name: Lint
+        run: |
+          ./vendor/bin/phpcs --standard=phpcs.xml src/ tests/
+          ./vendor/bin/phpmd ./ text phpmd.xml --exclude vendor
+
       - name: codecov
         uses: codecov/codecov-action@v1
         with:
