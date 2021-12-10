@@ -13,7 +13,8 @@ class DockerPublishCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'docker:publish';
+    protected $signature = 'docker:publish
+        {--php-version= : PHP version, default same as local PHP version}';
 
     /**
      * The console command description.
@@ -33,6 +34,17 @@ class DockerPublishCommand extends Command
 
         File::copyDirectory(__DIR__ . '/stubs', $basePath, FilesystemIterator::CURRENT_MODE_MASK);
 
+        // TODO: no testable, can not mock
+        $phpVersion = $this->option('php-version') ?? PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION;
+        $this->replaceVersion("$basePath/Dockerfile", $phpVersion);
+
         $this->info('published successfully.');
+    }
+
+    private function replaceVersion($dockerfile, $phpVersion)
+    {
+        $content = File::get($dockerfile);
+        $content = preg_replace('/FROM php:\d\.\d/i', "FROM php:${phpVersion}", $content);
+        File::put($dockerfile, $content);
     }
 }

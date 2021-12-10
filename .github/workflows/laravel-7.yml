@@ -2,10 +2,12 @@ name: Laravel 7
 on:
   push:
     branches:
-      - nothing
+      - main
   pull_request:
     branches:
-      - nothing
+      - main
+  schedule:
+    - cron: '7 4 * * *'
 
 jobs:
   test:
