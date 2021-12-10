@@ -32,6 +32,8 @@
         "laravel/framework": ">=v5.5.50"
     },
     "require-dev": {
-        "orchestra/testbench": ">=v3.5.6"
+        "orchestra/testbench": ">=v3.5.6",
+        "phpmd/phpmd": "^2.11",
+        "squizlabs/php_codesniffer": "^3.6"
     }
 }
