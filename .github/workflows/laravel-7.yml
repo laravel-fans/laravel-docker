@@ -2,17 +2,19 @@ name: Laravel 7
 on:
   push:
     branches:
-      - nothing
+      - main
   pull_request:
     branches:
-      - nothing
+      - main
+  schedule:
+    - cron: '7 4 * * *'
 
 jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
     container:
-      image: php:8.1-cli
+      image: php:8.0-cli
     steps:
       - name: Checkout
         uses: actions/checkout@v2
