@@ -37,6 +37,11 @@ jobs:
           ./vendor/bin/phpcs --standard=phpcs.xml src/ tests/
           ./vendor/bin/phpmd ./ text phpmd.xml --exclude vendor
 
+      - name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v1.6.0
+        with:
+          dockerfile: src/stubs/Dockerfile
+
       - name: codecov
         uses: codecov/codecov-action@v1
         with:
