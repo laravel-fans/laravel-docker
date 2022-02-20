@@ -1,4 +1,4 @@
-name: Laravel 8
+name: Laravel 9
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '7 5 * * *'
+    - cron: '7 6 * * *'
 
 jobs:
   test:
@@ -29,7 +29,7 @@ jobs:
           pecl install xdebug
           docker-php-ext-enable xdebug
           curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-          composer require orchestra/testbench:^v6 --dev
+          composer require orchestra/testbench:^v7 --dev
           XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-clover coverage.xml --coverage-filter src/ tests/
 
       - name: Lint
@@ -45,12 +45,12 @@ jobs:
       - name: codecov
         uses: codecov/codecov-action@v1
         with:
-          name: laravel-8
+          name: laravel-9
 
       - name: install in real Laravel project
         run: |
           rm -rf laravel-demo
-          composer create-project --prefer-dist laravel/laravel laravel-demo "8.*"
+          composer create-project --prefer-dist laravel/laravel laravel-demo "9.*"
           cd laravel-demo && composer require --dev laravel-fans/docker:dev-${CI_ACTION_REF_NAME} && php artisan docker:publish
           php artisan --version | awk '{print $3}' > .version
 
@@ -82,7 +82,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: laravel-demo
-          publish_branch: laravel-8
+          publish_branch: laravel-9
           allow_empty_commit: true
 
       - name: Set up Docker Buildx
@@ -107,7 +107,7 @@ jobs:
         with:
           push: true
           context: laravel-demo
-          tags: laravelfans/laravel:8,laravelfans/laravel:${{ env.LARAVEL_VERSION }}
+          tags: laravelfans/laravel:latest,laravelfans/laravel:9,laravelfans/laravel:${{ env.LARAVEL_VERSION }}
 
       - name: Image digest
         if: steps.docker_build.conclusion == 'success'
