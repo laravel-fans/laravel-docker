@@ -4,6 +4,7 @@
 [![Laravel 6](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%206/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-6.yml)
 [![Laravel 7](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%207/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-7.yml)
 [![Laravel 8](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%208/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-8.yml)
+[![Laravel 9](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%209/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-9.yml)
 
 Full Laravel production environment for Docker.
 
