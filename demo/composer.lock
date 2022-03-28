@@ -2753,16 +2753,16 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "8ced2afadd9ce455e2d5919d27c57e344bae4a09"
+                "reference": "8505afd4fea63b81a85d3b7b53ac3cb8dc347c28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/8ced2afadd9ce455e2d5919d27c57e344bae4a09",
-                "reference": "8ced2afadd9ce455e2d5919d27c57e344bae4a09",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/8505afd4fea63b81a85d3b7b53ac3cb8dc347c28",
+                "reference": "8505afd4fea63b81a85d3b7b53ac3cb8dc347c28",
                 "shasum": ""
             },
             "require": {
@@ -2807,9 +2807,6 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "4.x-dev"
-                },
                 "captainhook": {
                     "force-install": true
                 }
@@ -2834,7 +2831,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
-                "source": "https://github.com/ramsey/uuid/tree/4.3.0"
+                "source": "https://github.com/ramsey/uuid/tree/4.3.1"
             },
             "funding": [
                 {
@@ -2846,7 +2843,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-26T22:00:50+00:00"
+            "time": "2022-03-27T21:42:02+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
