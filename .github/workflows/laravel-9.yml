@@ -125,6 +125,7 @@ jobs:
         if: ${{ env.DOCKER_MANIFEST_DEV == '' || github.event_name == 'push' }}
         with:
           context: laravel-demo
+          file: Dockerfile.dev
           platforms: linux/amd64,linux/arm64
           push: true
           tags: laravelfans/laravel:9-dev,laravelfans/laravel:${{ env.LARAVEL_VERSION }}-dev
