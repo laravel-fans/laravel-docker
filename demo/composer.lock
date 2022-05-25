@@ -4330,12 +4330,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-fans/laravel-docker.git",
-                "reference": "4957a61bc1ef7ca4ec907bee9c5dd8083ba9905f"
+                "reference": "1ee47ba1a5e2cd8ce6bf426d802718593d8b3540"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/4957a61bc1ef7ca4ec907bee9c5dd8083ba9905f",
-                "reference": "4957a61bc1ef7ca4ec907bee9c5dd8083ba9905f",
+                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/1ee47ba1a5e2cd8ce6bf426d802718593d8b3540",
+                "reference": "1ee47ba1a5e2cd8ce6bf426d802718593d8b3540",
                 "shasum": ""
             },
             "require": {
@@ -4375,7 +4375,7 @@
                 "issues": "https://github.com/laravel-fans/laravel-docker/issues",
                 "source": "https://github.com/laravel-fans/laravel-docker/tree/main"
             },
-            "time": "2022-02-20T15:39:57+00:00"
+            "time": "2022-05-25T14:25:14+00:00"
         },
         {
             "name": "mockery/mockery",
