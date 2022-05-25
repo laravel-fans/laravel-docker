@@ -51,7 +51,7 @@ jobs:
         run: |
           rm -rf laravel-demo
           composer create-project --prefer-dist laravel/laravel laravel-demo "9.*"
-          cd laravel-demo && composer require --dev laravel-fans/docker:dev-${CI_ACTION_REF_NAME} && php artisan docker:publish
+          cd laravel-demo && composer require --dev laravel-fans/docker:dev-${CI_ACTION_REF_NAME} && php artisan docker:publish --dev
           php artisan --version | awk '{print $3}' > .version
 
       - name: Create Tar
@@ -103,6 +103,7 @@ jobs:
         run: |
           echo "LARAVEL_VERSION=$(cat .version)" >> $GITHUB_ENV
           echo "DOCKER_MANIFEST=$((DOCKER_CLI_EXPERIMENTAL=enabled docker manifest inspect laravelfans/laravel:$(cat .version) > /dev/null && echo 'json') || echo '')" >> $GITHUB_ENV
+          echo "DOCKER_MANIFEST_DEV=$((DOCKER_CLI_EXPERIMENTAL=enabled docker manifest inspect laravelfans/laravel:$(cat .version)-dev > /dev/null && echo 'json') || echo '')" >> $GITHUB_ENV
 
       - name: Build and push
         id: docker_build
@@ -117,3 +118,17 @@ jobs:
       - name: Image digest
         if: steps.docker_build.conclusion == 'success'
         run: echo ${{ steps.docker_build.outputs.digest }}
+
+      - name: Build and push dev
+        id: docker_build_dev
+        uses: docker/build-push-action@v2
+        if: ${{ env.DOCKER_MANIFEST_DEV == '' || github.event_name == 'push' }}
+        with:
+          context: laravel-demo
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: laravelfans/laravel:9-dev,laravelfans/laravel:${{ env.LARAVEL_VERSION }}-dev
+
+      - name: Image digest dev
+        if: steps.docker_build_dev.conclusion == 'success'
+        run: echo ${{ steps.docker_build_dev.outputs.digest }}
