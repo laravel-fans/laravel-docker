@@ -107,7 +107,7 @@ jobs:
 
       - name: Build and push
         id: docker_build
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         if: ${{ env.DOCKER_MANIFEST == '' || github.event_name == 'push' }}
         with:
           context: laravel-demo
@@ -121,7 +121,7 @@ jobs:
 
       - name: Build and push dev
         id: docker_build_dev
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         if: ${{ env.DOCKER_MANIFEST_DEV == '' || github.event_name == 'push' }}
         with:
           context: laravel-demo
