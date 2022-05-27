@@ -33,6 +33,6 @@ class DockerPublishCommandTest extends TestCase
         $laravelPath = __DIR__ . '/../vendor/orchestra/testbench-core/laravel';
         $this->artisan('docker:publish', ['--php-version' => '8.0', '--dev' => true])->run();
         $this->assertTrue(strpos(File::get($laravelPath . '/Dockerfile'), 'FROM php:8.0-apache') !== false);
-        $this->assertTrue(strpos(File::get($laravelPath . '/Dockerfile.dev'), 'FROM php:8.0-apache') !== false);
+        $this->assertTrue(strpos(File::get($laravelPath . '/Dockerfile.dev'), 'INCLUDE+ Dockerfile') !== false);
     }
 }
