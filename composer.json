@@ -35,5 +35,18 @@
         "orchestra/testbench": ">=v3.5.6",
         "phpmd/phpmd": "^2.11",
         "squizlabs/php_codesniffer": "^3.6"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"copy('.git-pre-commit', '.git/hooks/pre-commit');\"",
+            "@php -r \"chmod('.git/hooks/pre-commit', 0755);\""
+        ],
+        "lint": [
+            "./vendor/bin/phpcs --standard=phpcs.xml .",
+            "./vendor/bin/phpmd . text phpmd.xml"
+        ],
+        "test": [
+            "XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-clover coverage.xml --coverage-filter src/ tests/"
+        ]
     }
 }

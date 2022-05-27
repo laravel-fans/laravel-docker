@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+FILES=$(git diff --diff-filter=d --name-only --staged)
+for file in $FILES; do
+  ./vendor/bin/phpcs --standard=phpcs.xml "$file"
+  ./vendor/bin/phpmd "$file" text phpmd.xml
+done
+composer run test
