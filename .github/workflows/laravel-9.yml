@@ -49,7 +49,7 @@ jobs:
         run: |
           rm -rf laravel-demo
           composer create-project --prefer-dist laravel/laravel laravel-demo "9.*"
-          cd laravel-demo && composer require --dev laravel-fans/docker:dev-${CI_ACTION_REF_NAME} && php artisan docker:publish --dev
+          cd laravel-demo && composer require --dev laravel-fans/docker:dev-${CI_ACTION_REF_NAME} && php artisan docker:publish
           php artisan --version | awk '{print $3}' > .version
 
       - name: Create Tar

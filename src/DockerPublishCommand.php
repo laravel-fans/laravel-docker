@@ -14,8 +14,7 @@ class DockerPublishCommand extends Command
      * @var string
      */
     protected $signature = 'docker:publish
-        {--php-version= : PHP version, default same as local PHP version}
-        {--dev}';
+        {--php-version= : PHP version, default same as local PHP version}';
 
     /**
      * The console command description.
@@ -38,10 +37,6 @@ class DockerPublishCommand extends Command
         // TODO: no testable, can not mock
         $phpVersion = $this->option('php-version') ?? PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION;
         $this->replaceVersion("$basePath/Dockerfile", $phpVersion);
-        $this->replaceVersion("$basePath/Dockerfile.dev", $phpVersion);
-        if (!$this->option('dev')) {
-            File::delete("$basePath/Dockerfile.dev");
-        }
 
         $this->info('published successfully.');
     }
