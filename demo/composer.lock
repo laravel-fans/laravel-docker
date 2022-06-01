@@ -959,16 +959,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.83.14",
+            "version": "v8.83.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "141cf126f1746c7264f59aa78c923a84eaab501e"
+                "reference": "bf8fbdd9061611b2c05562fa14f6987cc5145d78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/141cf126f1746c7264f59aa78c923a84eaab501e",
-                "reference": "141cf126f1746c7264f59aa78c923a84eaab501e",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/bf8fbdd9061611b2c05562fa14f6987cc5145d78",
+                "reference": "bf8fbdd9061611b2c05562fa14f6987cc5145d78",
                 "shasum": ""
             },
             "require": {
@@ -1128,7 +1128,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-05-24T14:04:02+00:00"
+            "time": "2022-05-31T14:57:02+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -2010,16 +2010,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.13.2",
+            "version": "v4.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "210577fe3cf7badcc5814d99455df46564f3c077"
+                "reference": "34bea19b6e03d8153165d8f30bba4c3be86184c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/210577fe3cf7badcc5814d99455df46564f3c077",
-                "reference": "210577fe3cf7badcc5814d99455df46564f3c077",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/34bea19b6e03d8153165d8f30bba4c3be86184c1",
+                "reference": "34bea19b6e03d8153165d8f30bba4c3be86184c1",
                 "shasum": ""
             },
             "require": {
@@ -2060,9 +2060,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.14.0"
             },
-            "time": "2021-11-30T19:35:32+00:00"
+            "time": "2022-05-31T20:59:12+00:00"
         },
         {
             "name": "opis/closure",
@@ -5903,16 +5903,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.14.7",
+            "version": "v1.14.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "c049316f9bcb02598607307f18b514b66202b639"
+                "reference": "04b425968c6a76940bddd2cfa40bf9e9ce78eee8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/c049316f9bcb02598607307f18b514b66202b639",
-                "reference": "c049316f9bcb02598607307f18b514b66202b639",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/04b425968c6a76940bddd2cfa40bf9e9ce78eee8",
+                "reference": "04b425968c6a76940bddd2cfa40bf9e9ce78eee8",
                 "shasum": ""
             },
             "require": {
@@ -5959,7 +5959,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2022-05-21T17:14:14+00:00"
+            "time": "2022-05-31T14:48:21+00:00"
         },
         {
             "name": "mockery/mockery",
