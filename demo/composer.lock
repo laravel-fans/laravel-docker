@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff805b1853539c979153407037dfb9df",
+    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5851,59 +5851,6 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
-            "name": "laravel-fans/docker",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel-fans/laravel-docker.git",
-                "reference": "7b7dfd0de5f1eddd8eba8b4fefef986f381b9715"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/7b7dfd0de5f1eddd8eba8b4fefef986f381b9715",
-                "reference": "7b7dfd0de5f1eddd8eba8b4fefef986f381b9715",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": ">=v5.5.50"
-            },
-            "require-dev": {
-                "orchestra/testbench": ">=v3.5.6",
-                "phpmd/phpmd": "^2.11",
-                "squizlabs/php_codesniffer": "^3.6"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "LaravelFans\\Docker\\DockerServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "LaravelFans\\Docker\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "sinkcup",
-                    "email": "sinkcup@gmail.com"
-                }
-            ],
-            "description": "Full Laravel production environment for Docker",
-            "support": {
-                "issues": "https://github.com/laravel-fans/laravel-docker/issues",
-                "source": "https://github.com/laravel-fans/laravel-docker/tree/v0.6.0"
-            },
-            "time": "2022-05-27T03:27:42+00:00"
-        },
-        {
             "name": "laravel/sail",
             "version": "v1.15.4",
             "source": {
@@ -7956,9 +7903,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "laravel-fans/docker": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
