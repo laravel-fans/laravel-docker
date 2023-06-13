@@ -5579,16 +5579,16 @@
         },
         {
             "name": "fakerphp/faker",
-            "version": "v1.22.0",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "f85772abd508bd04e20bb4b1bbe260a68d0066d2"
+                "reference": "e3daa170d00fde61ea7719ef47bb09bb8f1d9b01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/f85772abd508bd04e20bb4b1bbe260a68d0066d2",
-                "reference": "f85772abd508bd04e20bb4b1bbe260a68d0066d2",
+                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/e3daa170d00fde61ea7719ef47bb09bb8f1d9b01",
+                "reference": "e3daa170d00fde61ea7719ef47bb09bb8f1d9b01",
                 "shasum": ""
             },
             "require": {
@@ -5641,9 +5641,9 @@
             ],
             "support": {
                 "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.22.0"
+                "source": "https://github.com/FakerPHP/Faker/tree/v1.23.0"
             },
-            "time": "2023-05-14T12:31:37+00:00"
+            "time": "2023-06-12T08:44:38+00:00"
         },
         {
             "name": "filp/whoops",
@@ -5822,16 +5822,16 @@
         },
         {
             "name": "laravel/pint",
-            "version": "v1.10.1",
+            "version": "v1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "d69f914aa347a448628b672ba90adf0b4ea0ce4a"
+                "reference": "f78de1a1bbab7aa41a6ea211c5962b0530d1a301"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/d69f914aa347a448628b672ba90adf0b4ea0ce4a",
-                "reference": "d69f914aa347a448628b672ba90adf0b4ea0ce4a",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/f78de1a1bbab7aa41a6ea211c5962b0530d1a301",
+                "reference": "f78de1a1bbab7aa41a6ea211c5962b0530d1a301",
                 "shasum": ""
             },
             "require": {
@@ -5884,7 +5884,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2023-06-03T15:01:17+00:00"
+            "time": "2023-06-12T10:50:04+00:00"
         },
         {
             "name": "laravel/sail",
