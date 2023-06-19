@@ -15,7 +15,7 @@ class DockerPublishCommandTest extends TestCase
         $this->assertFileExists($laravelPath . '/docker/var/spool/cron/crontabs');
         $phpVersion = PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION;
         $this->assertFileExists($laravelPath . '/Dockerfile');
-        $this->assertTrue(strpos(File::get($laravelPath . '/Dockerfile'), "FROM php:${phpVersion}-apache") !== false);
+        $this->assertTrue(strpos(File::get($laravelPath . '/Dockerfile'), "FROM php:{$phpVersion}-apache") !== false);
         $this->assertFileExists($laravelPath . '/.dockerignore');
         $this->assertFileExists($laravelPath . '/Dockerfile.dev');
         $this->assertTrue(strpos(File::get($laravelPath . '/Dockerfile.dev'), 'INCLUDE+ Dockerfile') !== false);
