@@ -5773,16 +5773,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-fans/laravel-docker.git",
-                "reference": "11243489b1309180b3b9bbee3efff9399d77a273"
+                "reference": "3df789fe7dd763f829e18a2f16a2f57adb434356"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/11243489b1309180b3b9bbee3efff9399d77a273",
-                "reference": "11243489b1309180b3b9bbee3efff9399d77a273",
+                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/3df789fe7dd763f829e18a2f16a2f57adb434356",
+                "reference": "3df789fe7dd763f829e18a2f16a2f57adb434356",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": ">=v5.5.50"
+                "laravel/framework": ">=v5.5.50",
+                "php": "<8.2"
             },
             "require-dev": {
                 "orchestra/testbench": ">=v3.5.6",
@@ -5818,7 +5819,7 @@
                 "issues": "https://github.com/laravel-fans/laravel-docker/issues",
                 "source": "https://github.com/laravel-fans/laravel-docker/tree/main"
             },
-            "time": "2023-06-19T04:23:51+00:00"
+            "time": "2023-06-19T05:57:32+00:00"
         },
         {
             "name": "laravel/pint",
