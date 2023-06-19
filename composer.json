@@ -29,7 +29,8 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "laravel/framework": ">=v5.5.50"
+        "laravel/framework": ">=v5.5.50",
+        "php": "<8.2"
     },
     "require-dev": {
         "orchestra/testbench": ">=v3.5.6",
