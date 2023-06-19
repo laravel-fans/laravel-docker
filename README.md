@@ -1,8 +1,6 @@
 # Laravel Docker
 
 [![codecov](https://codecov.io/gh/laravel-fans/laravel-docker/branch/main/graph/badge.svg)](https://codecov.io/gh/laravel-fans/laravel-docker)
-[![Laravel 6](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%206/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-6.yml)
-[![Laravel 7](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%207/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-7.yml)
 [![Laravel 8](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%208/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-8.yml)
 [![Laravel 9](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%209/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-9.yml)
 
