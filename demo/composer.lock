@@ -5985,16 +5985,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.31.2",
+            "version": "v1.31.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "b4af38e1ab16fe7aa729eddf5b810229f42d2ad3"
+                "reference": "0a7e2891a85eba2d448a9ffc6fc5ce367e924bc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/b4af38e1ab16fe7aa729eddf5b810229f42d2ad3",
-                "reference": "b4af38e1ab16fe7aa729eddf5b810229f42d2ad3",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/0a7e2891a85eba2d448a9ffc6fc5ce367e924bc1",
+                "reference": "0a7e2891a85eba2d448a9ffc6fc5ce367e924bc1",
                 "shasum": ""
             },
             "require": {
@@ -6044,7 +6044,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2024-09-03T13:44:23+00:00"
+            "time": "2024-09-03T20:05:33+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -6726,16 +6726,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.31",
+            "version": "10.5.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "43e7c3e6a484e538453f89dfa6a6f308c32792da"
+                "reference": "f069f46840445d37a4e6f0de8c5879598f9c4327"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/43e7c3e6a484e538453f89dfa6a6f308c32792da",
-                "reference": "43e7c3e6a484e538453f89dfa6a6f308c32792da",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f069f46840445d37a4e6f0de8c5879598f9c4327",
+                "reference": "f069f46840445d37a4e6f0de8c5879598f9c4327",
                 "shasum": ""
             },
             "require": {
@@ -6807,7 +6807,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.31"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.32"
             },
             "funding": [
                 {
@@ -6823,7 +6823,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-03T11:57:55+00:00"
+            "time": "2024-09-04T13:33:39+00:00"
         },
         {
             "name": "sebastian/cli-parser",
