@@ -56,7 +56,7 @@ jobs:
         run: tar -cvf laravel-demo.tar laravel-demo
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: laravel-demo
           path: laravel-demo.tar
@@ -68,7 +68,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: laravel-demo
 
