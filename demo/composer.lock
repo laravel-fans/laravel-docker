@@ -1052,16 +1052,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.48.20",
+            "version": "v10.48.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "be2be342d4c74db6a8d2bd18469cd6d488ab9c98"
+                "reference": "c4ea52bb044faef4a103d7dd81746c01b2ec860e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/be2be342d4c74db6a8d2bd18469cd6d488ab9c98",
-                "reference": "be2be342d4c74db6a8d2bd18469cd6d488ab9c98",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c4ea52bb044faef4a103d7dd81746c01b2ec860e",
+                "reference": "c4ea52bb044faef4a103d7dd81746c01b2ec860e",
                 "shasum": ""
             },
             "require": {
@@ -1255,7 +1255,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-08-09T07:55:45+00:00"
+            "time": "2024-09-12T15:00:09+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -5795,12 +5795,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-fans/laravel-docker.git",
-                "reference": "3df789fe7dd763f829e18a2f16a2f57adb434356"
+                "reference": "3c2a015fc98c82eaf041bfa853ca9dae2d3dd291"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/3df789fe7dd763f829e18a2f16a2f57adb434356",
-                "reference": "3df789fe7dd763f829e18a2f16a2f57adb434356",
+                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/3c2a015fc98c82eaf041bfa853ca9dae2d3dd291",
+                "reference": "3c2a015fc98c82eaf041bfa853ca9dae2d3dd291",
                 "shasum": ""
             },
             "require": {
@@ -5841,7 +5841,7 @@
                 "issues": "https://github.com/laravel-fans/laravel-docker/issues",
                 "source": "https://github.com/laravel-fans/laravel-docker/tree/main"
             },
-            "time": "2023-06-19T05:57:32+00:00"
+            "time": "2024-09-13T03:45:28+00:00"
         },
         {
             "name": "laravel/pint",
