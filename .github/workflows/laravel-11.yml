@@ -1,4 +1,4 @@
-name: Laravel 8
+name: Laravel 11
 on:
   push:
     branches:
@@ -14,7 +14,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     container:
-      image: php:8.1-cli
+      image: php:8.3-cli
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -29,7 +29,7 @@ jobs:
           pecl install xdebug
           docker-php-ext-enable xdebug
           curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-          composer require orchestra/testbench:^v6 --dev
+          composer require orchestra/testbench:^v9 --dev
           composer run test
 
       - name: Lint
@@ -43,12 +43,12 @@ jobs:
       - name: codecov
         uses: codecov/codecov-action@v1
         with:
-          name: laravel-8
+          name: laravel-11
 
       - name: install in real Laravel project
         run: |
           rm -rf laravel-demo
-          composer create-project --prefer-dist laravel/laravel laravel-demo "8.*"
+          composer create-project --prefer-dist laravel/laravel laravel-demo "11.*"
           cd laravel-demo && composer require --dev laravel-fans/docker:dev-${CI_ACTION_REF_NAME} && php artisan docker:publish
           php artisan --version | awk '{print $3}' > .version
 
@@ -80,7 +80,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: laravel-demo
-          publish_branch: laravel-8
+          publish_branch: laravel-11
           destination_dir: demo
           allow_empty_commit: true
 
@@ -111,7 +111,7 @@ jobs:
           context: laravel-demo
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: laravelfans/laravel:8,laravelfans/laravel:${{ env.LARAVEL_VERSION }}
+          tags: laravelfans/laravel:11,laravelfans/laravel:${{ env.LARAVEL_VERSION }}
 
       - name: Image digest
         if: steps.docker_build.conclusion == 'success'
@@ -126,7 +126,7 @@ jobs:
           file: laravel-demo/Dockerfile.dev
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: laravelfans/laravel:8-dev,laravelfans/laravel:${{ env.LARAVEL_VERSION }}-dev
+          tags: laravelfans/laravel:11-dev,laravelfans/laravel:${{ env.LARAVEL_VERSION }}-dev
 
       - name: Image digest dev
         if: steps.docker_build_dev.conclusion == 'success'
