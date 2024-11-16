@@ -32,7 +32,7 @@ class DockerPublishCommand extends Command
     {
         $basePath = $this->laravel->basePath();
 
-        File::copyDirectory(__DIR__ . '/stubs', $basePath, FilesystemIterator::CURRENT_MODE_MASK);
+        File::copyDirectory(__DIR__ . '/stubs', $basePath);
 
         // TODO: no testable, can not mock
         $phpVersion = $this->option('php-version') ?? PHP_MAJOR_VERSION . '.' . PHP_MINOR_VERSION;

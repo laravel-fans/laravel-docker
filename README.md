@@ -1,9 +1,8 @@
 # Laravel Docker
 
 [![codecov](https://codecov.io/gh/laravel-fans/laravel-docker/branch/main/graph/badge.svg)](https://codecov.io/gh/laravel-fans/laravel-docker)
-[![Laravel 8](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%208/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-8.yml)
-[![Laravel 9](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%209/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-9.yml)
 [![Laravel 10](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%2010/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-10.yml)
+[![Laravel 11](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%2011/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-11.yml)
 
 Full Laravel production environment for Docker.
 
