@@ -5800,12 +5800,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-fans/laravel-docker.git",
-                "reference": "38c7962a786d1f8c4dc864fa8f5d005cc4e740c6"
+                "reference": "64acabfe597ebf93519ff5dc52942ba0ab6adc63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/38c7962a786d1f8c4dc864fa8f5d005cc4e740c6",
-                "reference": "38c7962a786d1f8c4dc864fa8f5d005cc4e740c6",
+                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/64acabfe597ebf93519ff5dc52942ba0ab6adc63",
+                "reference": "64acabfe597ebf93519ff5dc52942ba0ab6adc63",
                 "shasum": ""
             },
             "require": {
@@ -5843,9 +5843,9 @@
             "description": "Full Laravel production environment for Docker",
             "support": {
                 "issues": "https://github.com/laravel-fans/laravel-docker/issues",
-                "source": "https://github.com/laravel-fans/laravel-docker/tree/main"
+                "source": "https://github.com/laravel-fans/laravel-docker/tree/v0.6.1"
             },
-            "time": "2024-09-13T03:52:57+00:00"
+            "time": "2024-11-16T18:22:09+00:00"
         },
         {
             "name": "laravel/pint",
