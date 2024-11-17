@@ -5,8 +5,8 @@ WORKDIR /var/www/laravel
 RUN curl -o /usr/local/bin/composer https://getcomposer.org/download/latest-stable/composer.phar \
     && chmod +x /usr/local/bin/composer
 
-# hadolint ignore=DL3008
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+# hadolint ignore=DL3008
 RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install --no-install-recommends -y \
     cron \
