@@ -5806,16 +5806,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-fans/laravel-docker.git",
-                "reference": "9b6f938d43cbafb5f1cf3872bbf884ece9e7ef26"
+                "reference": "75fe9defc766d19fc33e489f52a90c16fa4117e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/9b6f938d43cbafb5f1cf3872bbf884ece9e7ef26",
-                "reference": "9b6f938d43cbafb5f1cf3872bbf884ece9e7ef26",
+                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/75fe9defc766d19fc33e489f52a90c16fa4117e4",
+                "reference": "75fe9defc766d19fc33e489f52a90c16fa4117e4",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": ">=v5.5.50"
+                "laravel/framework": ">=v10"
             },
             "require-dev": {
                 "orchestra/testbench": ">=v3.5.6",
@@ -5849,9 +5849,9 @@
             "description": "Full Laravel production environment for Docker",
             "support": {
                 "issues": "https://github.com/laravel-fans/laravel-docker/issues",
-                "source": "https://github.com/laravel-fans/laravel-docker/tree/main"
+                "source": "https://github.com/laravel-fans/laravel-docker/tree/v1.0.0"
             },
-            "time": "2024-11-17T10:57:12+00:00"
+            "time": "2024-11-17T11:58:02+00:00"
         },
         {
             "name": "laravel/pail",
