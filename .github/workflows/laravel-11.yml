@@ -111,7 +111,7 @@ jobs:
           context: laravel-demo
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: laravelfans/laravel:11,laravelfans/laravel:${{ env.LARAVEL_VERSION }}
+          tags: laravelfans/laravel:latest,laravelfans/laravel:11,laravelfans/laravel:${{ env.LARAVEL_VERSION }}
 
       - name: Image digest
         if: steps.docker_build.conclusion == 'success'
