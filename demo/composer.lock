@@ -5800,12 +5800,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-fans/laravel-docker.git",
-                "reference": "607e98b6070afc2e9c4c6bcfc7b95da6003eb0c7"
+                "reference": "444d1774afe2b87e44682d761522acc24bde512f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/607e98b6070afc2e9c4c6bcfc7b95da6003eb0c7",
-                "reference": "607e98b6070afc2e9c4c6bcfc7b95da6003eb0c7",
+                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/444d1774afe2b87e44682d761522acc24bde512f",
+                "reference": "444d1774afe2b87e44682d761522acc24bde512f",
                 "shasum": ""
             },
             "require": {
@@ -5845,7 +5845,7 @@
                 "issues": "https://github.com/laravel-fans/laravel-docker/issues",
                 "source": "https://github.com/laravel-fans/laravel-docker/tree/main"
             },
-            "time": "2024-11-17T07:37:04+00:00"
+            "time": "2024-11-17T07:45:47+00:00"
         },
         {
             "name": "laravel/pint",

@@ -32,7 +32,7 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
 COPY composer.json composer.lock ./
 RUN composer install --no-autoloader --no-scripts --no-dev
 
-COPY package.json package-lock.json ./
+COPY package*.json ./
 RUN npm install
 
 COPY docker/ /
