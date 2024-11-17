@@ -6,13 +6,14 @@ RUN curl -o /usr/local/bin/composer https://getcomposer.org/download/latest-stab
     && chmod +x /usr/local/bin/composer
 
 # hadolint ignore=DL3008
-RUN apt-get update \
+RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install --no-install-recommends -y \
     cron \
     icu-devtools \
     jq \
     libfreetype6-dev libicu-dev libjpeg62-turbo-dev libpng-dev libpq-dev \
     libsasl2-dev libssl-dev libwebp-dev libxpm-dev libzip-dev libzstd-dev \
+    nodejs \
     unzip \
     zlib1g-dev \
     && apt-get clean \
