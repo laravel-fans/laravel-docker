@@ -29,7 +29,7 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "laravel/framework": ">=v5.5.50"
+        "laravel/framework": ">=v10"
     },
     "require-dev": {
         "orchestra/testbench": ">=v3.5.6",
