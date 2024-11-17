@@ -1,4 +1,4 @@
-FROM php:8.1-apache
+FROM php:8.3-apache
 
 WORKDIR /var/www/laravel
 
@@ -6,6 +6,7 @@ RUN curl -o /usr/local/bin/composer https://getcomposer.org/download/latest-stab
     && chmod +x /usr/local/bin/composer
 
 # hadolint ignore=DL3008
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install --no-install-recommends -y \
     cron \
@@ -31,6 +32,9 @@ RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
 COPY composer.json composer.lock ./
 RUN composer install --no-autoloader --no-scripts --no-dev
 
+COPY package.json package-lock.json ./
+RUN npm install
+
 COPY docker/ /
 RUN a2enmod rewrite headers \
     && a2ensite laravel \
@@ -38,6 +42,7 @@ RUN a2enmod rewrite headers \
     && chmod +x /usr/local/bin/docker-laravel-entrypoint
 
 COPY . /var/www/laravel
-RUN composer install --optimize-autoloader --no-dev
+RUN composer install --optimize-autoloader --no-dev \
+    && npm run build
 
 CMD ["docker-laravel-entrypoint"]
