@@ -1055,16 +1055,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.48.29",
+            "version": "v10.49.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "8f7f9247cb8aad1a769d6b9815a6623d89b46b47"
+                "reference": "b6848517f93445e7f243aaa4f3c32cc70f6739e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/8f7f9247cb8aad1a769d6b9815a6623d89b46b47",
-                "reference": "8f7f9247cb8aad1a769d6b9815a6623d89b46b47",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/b6848517f93445e7f243aaa4f3c32cc70f6739e2",
+                "reference": "b6848517f93445e7f243aaa4f3c32cc70f6739e2",
                 "shasum": ""
             },
             "require": {
@@ -1223,6 +1223,7 @@
             },
             "autoload": {
                 "files": [
+                    "src/Illuminate/Collections/functions.php",
                     "src/Illuminate/Collections/helpers.php",
                     "src/Illuminate/Events/functions.php",
                     "src/Illuminate/Filesystem/functions.php",
@@ -1258,7 +1259,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-03-12T14:42:01+00:00"
+            "time": "2025-09-08T22:02:05+00:00"
         },
         {
             "name": "laravel/prompts",
