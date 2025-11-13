@@ -3702,16 +3702,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v6.4.28",
+            "version": "v6.4.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "1ba1d5fe6465b0fa39c8627ba552b2c29301aa81"
+                "reference": "b03d11e015552a315714c127d8d1e0f9e970ec88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/1ba1d5fe6465b0fa39c8627ba552b2c29301aa81",
-                "reference": "1ba1d5fe6465b0fa39c8627ba552b2c29301aa81",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b03d11e015552a315714c127d8d1e0f9e970ec88",
+                "reference": "b03d11e015552a315714c127d8d1e0f9e970ec88",
                 "shasum": ""
             },
             "require": {
@@ -3759,7 +3759,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v6.4.28"
+                "source": "https://github.com/symfony/http-foundation/tree/v6.4.29"
             },
             "funding": [
                 {
@@ -3779,20 +3779,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-06T10:41:18+00:00"
+            "time": "2025-11-08T16:40:12+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v6.4.28",
+            "version": "v6.4.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "bbccadab358e236fcf13cc02a01fc0115d09d787"
+                "reference": "18818b48f54c1d2bd92b41d82d8345af50b15658"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/bbccadab358e236fcf13cc02a01fc0115d09d787",
-                "reference": "bbccadab358e236fcf13cc02a01fc0115d09d787",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/18818b48f54c1d2bd92b41d82d8345af50b15658",
+                "reference": "18818b48f54c1d2bd92b41d82d8345af50b15658",
                 "shasum": ""
             },
             "require": {
@@ -3877,7 +3877,7 @@
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-kernel/tree/v6.4.28"
+                "source": "https://github.com/symfony/http-kernel/tree/v6.4.29"
             },
             "funding": [
                 {
@@ -3897,7 +3897,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-06T20:52:25+00:00"
+            "time": "2025-11-12T11:22:59+00:00"
         },
         {
             "name": "symfony/mailer",
@@ -5937,16 +5937,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.47.0",
+            "version": "v1.48.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "9a11e822238167ad8b791e4ea51155d25cf4d8f2"
+                "reference": "1bf3b8870b72a258a3b6b5119435835ece522e8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/9a11e822238167ad8b791e4ea51155d25cf4d8f2",
-                "reference": "9a11e822238167ad8b791e4ea51155d25cf4d8f2",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/1bf3b8870b72a258a3b6b5119435835ece522e8a",
+                "reference": "1bf3b8870b72a258a3b6b5119435835ece522e8a",
                 "shasum": ""
             },
             "require": {
@@ -5996,7 +5996,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2025-10-28T13:55:29+00:00"
+            "time": "2025-11-09T14:46:21+00:00"
         },
         {
             "name": "mockery/mockery",
