@@ -3,8 +3,8 @@
 [![codecov](https://codecov.io/gh/laravel-fans/laravel-docker/branch/main/graph/badge.svg)](https://codecov.io/gh/laravel-fans/laravel-docker)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/laravel-fans/docker)](https://packagist.org/packages/laravel-fans/docker)
 [![Docker Pulls](https://img.shields.io/docker/pulls/laravelfans/laravel)](https://hub.docker.com/r/laravelfans/laravel)
-[![Laravel 10](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%2010/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-10.yml)
 [![Laravel 11](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%2011/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-11.yml)
+[![Laravel 12](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%2012/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-12.yml)
 
 Full Laravel production and development environment for Docker, based on the official image `php:apache`.
 
@@ -13,8 +13,8 @@ Full Laravel production and development environment for Docker, based on the off
 It is recommended to use this docker image in your testing environment(amd64 or arm64, support Apple silicon), it contains git/jq/vim/nodejs/npm, and php extensions: gd/mysql/pgsql/redis/xdebug.
 
 ```shell
-docker run -p 8000:80 -v $(pwd):/var/www/laravel laravelfans/laravel:11-dev
-docker run -v $(pwd):/var/www/laravel -it laravelfans/laravel:10-dev bash
+docker run -p 8000:80 -v $(pwd):/var/www/laravel laravelfans/laravel:12-dev
+docker run -v $(pwd):/var/www/laravel -it laravelfans/laravel:12-dev bash
 ```
 
 ## production

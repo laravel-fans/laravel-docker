@@ -1,4 +1,4 @@
-name: Laravel 10
+name: Laravel 12
 on:
   push:
     paths-ignore:
@@ -16,7 +16,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     container:
-      image: php:8.1-cli
+      image: php:8.4-cli
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -45,12 +45,12 @@ jobs:
       - name: codecov
         uses: codecov/codecov-action@v1
         with:
-          name: laravel-10
+          name: laravel-12
 
       - name: install in real Laravel project
         run: |
           rm -rf laravel-demo
-          composer create-project --prefer-dist laravel/laravel laravel-demo "10.*"
+          composer create-project --prefer-dist laravel/laravel laravel-demo "12.*"
           cd laravel-demo && composer require --dev laravel-fans/docker:dev-${CI_ACTION_REF_NAME} && php artisan docker:publish
           php artisan --version | awk '{print $3}' > .version
 
@@ -82,7 +82,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: laravel-demo
-          publish_branch: laravel-10
+          publish_branch: laravel-12
           destination_dir: demo
           allow_empty_commit: true
 
@@ -113,7 +113,7 @@ jobs:
           context: laravel-demo
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: laravelfans/laravel:10,laravelfans/laravel:${{ env.LARAVEL_VERSION }}
+          tags: laravelfans/laravel:12,laravelfans/laravel:${{ env.LARAVEL_VERSION }}
 
       - name: Image digest
         if: steps.docker_build.conclusion == 'success'
@@ -128,7 +128,7 @@ jobs:
           file: laravel-demo/Dockerfile.dev
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: laravelfans/laravel:10-dev,laravelfans/laravel:${{ env.LARAVEL_VERSION }}-dev
+          tags: laravelfans/laravel:12-dev,laravelfans/laravel:${{ env.LARAVEL_VERSION }}-dev
 
       - name: Image digest dev
         if: steps.docker_build_dev.conclusion == 'success'
