@@ -3,8 +3,8 @@
 [![codecov](https://codecov.io/gh/laravel-fans/laravel-docker/branch/main/graph/badge.svg)](https://codecov.io/gh/laravel-fans/laravel-docker)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/laravel-fans/docker)](https://packagist.org/packages/laravel-fans/docker)
 [![Docker Pulls](https://img.shields.io/docker/pulls/laravelfans/laravel)](https://hub.docker.com/r/laravelfans/laravel)
-[![Laravel 11](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%2011/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-11.yml)
 [![Laravel 12](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%2012/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-12.yml)
+[![Laravel 13](https://github.com/laravel-fans/laravel-docker/workflows/Laravel%2013/badge.svg)](https://github.com/laravel-fans/laravel-docker/actions/workflows/laravel-13.yml)
 
 Full Laravel production and development environment for Docker, based on the official image `php:apache`.
 
