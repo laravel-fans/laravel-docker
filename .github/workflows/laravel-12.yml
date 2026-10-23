@@ -31,7 +31,7 @@ jobs:
           pecl install xdebug
           docker-php-ext-enable xdebug
           curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-          composer require orchestra/testbench:^v8 --dev
+          composer require orchestra/testbench:^v10 --dev
           composer run test
 
       - name: Lint
