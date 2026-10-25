@@ -1,4 +1,4 @@
-FROM php:8.3-apache
+FROM php:8.5-apache
 
 WORKDIR /var/www/laravel
 
@@ -7,7 +7,7 @@ RUN curl -o /usr/local/bin/composer https://getcomposer.org/download/latest-stab
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # hadolint ignore=DL3008
-RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - \
+RUN curl -sL https://deb.nodesource.com/setup_24.x | bash - \
     && apt-get install --no-install-recommends -y \
     cron \
     icu-devtools \
@@ -23,11 +23,11 @@ RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - \
 
 # hadolint ignore=DL3059
 RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
-    && pecl install --configureoptions='enable-redis-igbinary="yes" enable-redis-lzf="yes" enable-redis-zstd="yes"' igbinary zstd redis \
+    && pecl install --configureoptions='enable-redis-lzf="yes" enable-redis-zstd="yes"' zstd redis \
     && pecl clear-cache \
     && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp --with-xpm \
     && docker-php-ext-install gd intl pdo_mysql pdo_pgsql zip \
-    && docker-php-ext-enable igbinary opcache redis zstd
+    && docker-php-ext-enable opcache redis zstd
 
 COPY composer.json composer.lock ./
 RUN composer install --no-autoloader --no-scripts --no-dev
