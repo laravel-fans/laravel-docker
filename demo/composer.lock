@@ -6324,12 +6324,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-fans/laravel-docker.git",
-                "reference": "1e70a8766a61c38c82d7059bf3e4a47434b64c98"
+                "reference": "9461f1997b8045d4d16d903535f5ac69a9425765"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/1e70a8766a61c38c82d7059bf3e4a47434b64c98",
-                "reference": "1e70a8766a61c38c82d7059bf3e4a47434b64c98",
+                "url": "https://api.github.com/repos/laravel-fans/laravel-docker/zipball/9461f1997b8045d4d16d903535f5ac69a9425765",
+                "reference": "9461f1997b8045d4d16d903535f5ac69a9425765",
                 "shasum": ""
             },
             "require": {
@@ -6369,7 +6369,7 @@
                 "issues": "https://github.com/laravel-fans/laravel-docker/issues",
                 "source": "https://github.com/laravel-fans/laravel-docker/tree/main"
             },
-            "time": "2026-10-23T12:58:27+00:00"
+            "time": "2026-10-25T04:34:33+00:00"
         },
         {
             "name": "laravel/agent-detector",
